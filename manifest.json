@@ -1,0 +1,28 @@
+{
+  "name": "Power Dat",
+  "description": "Have the loads with the highest rate per mile highlighted for you to save you time.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Highlight the rows depending on the result",
+    "icons": {
+      "16": "logo.png",
+      "48": "",
+      "128": ""
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://power.dat.com/*"
+      ],
+      "js": [
+        "inject.js"
+      ]
+    }
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}
